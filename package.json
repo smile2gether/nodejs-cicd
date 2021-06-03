@@ -7,7 +7,7 @@
   "scripts": {
     "start": "ts-node index.ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "newman run postman_collections/Nodejs\\ CI-CD.postman_collection.json"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@types/node": "^15.9.0",
     "chalk": "^4.1.1",
     "express": "^4.17.1",
+    "newman": "^5.2.3",
     "tslint": "^6.1.3"
   },
   "devDependencies": {
