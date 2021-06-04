@@ -6,6 +6,8 @@ const chalk = require('chalk');
  */
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => res.status(200).json('Test')); // testing route
 
 /**
@@ -17,7 +19,5 @@ app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), app.get('host'), () => {
     console.log(`${chalk.green('(✓)')} App is running at http://${app.get('host')}:${app.get('port')} in ${app.get('env')} mode'`);
     console.log('Press CTRL-C to stop\n');
-    console.log('App is running');
-
-    console.log('\n\nHello typescript !')
+    console.log('App is running\n');
 });
