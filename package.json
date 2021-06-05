@@ -9,7 +9,9 @@
     "build": "tsc",
     "prestart": "yarn build",
     "start": "ts-node .",
-    "test": "newman run postman_collections/Nodejs\\ CI-CD.postman_collection.json"
+    "start-server": "npm start",
+    "test": "newman run postman_collections/Nodejs\\ CI-CD.postman_collection.json",
+    "ci": "start-server-and-test 'yarn start-server' http://localhost:3000 'yarn test'"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +28,7 @@
     "@types/express": "^4.17.12",
     "@types/node": "^15.12.0",
     "nodemon": "^2.0.7",
+    "start-server-and-test": "^1.12.4",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.2"
   }
