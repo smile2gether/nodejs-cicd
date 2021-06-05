@@ -1,4 +1,5 @@
 {
+//  "defaultSeverity": "error",
   "extends": "tslint:recommended",
   "rules": {
     "max-line-length": {
@@ -9,10 +10,7 @@
     "no-bitwise": true,
     "no-conditional-assignment": true,
     "no-consecutive-blank-lines": false,
-    "no-console": {
-      "severity": "warning",
-      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
-    }
+    "no-console": false
   },
   "jsRules": {
     "max-line-length": {
